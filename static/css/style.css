@@ -1,0 +1,203 @@
+:root {
+    --primary-color-custom: #ac20be; /* Color primario */
+    --secondary-color-custom: #54025e; /* Color secundario */
+    --third-color-custom: #361266; /* Color terciario */
+}
+
+/* Colores personalizados */
+.primary-color-custom {
+    color: var(--primary-color-custom);
+}
+
+.secundary-color-custom {
+    color: var(--secondary-color-custom);
+}
+
+.third-color-custom {
+    color: var(--third-color-custom);
+}
+
+.background-color-primary-custom{
+    background-color: var(--primary-color-custom)
+}
+
+.background-color-secondary-custom{
+    background-color: var(--secondary-color-custom);
+}
+
+.background-color-third-custom{
+    background-color: var(--third-color-custom);
+}
+
+
+/* Estilos para el cuerpo de la página */
+
+
+/*Login*/
+
+.login-body{
+    font-family: "Rubik", -apple-system, SF Pro Text, SF UI Text, system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(172,32,190,1) 100%, rgba(0,212,255,1) 100%);
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-container{
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container form {
+    position: relative;
+    margin: 0 auto;
+}
+
+.login-container .form-group {
+    position: relative;
+    margin-bottom: 15px; /* Agrega margen inferior para separar los inputs */
+}
+
+.login-container .form-group input[type="text"],
+.login-container .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0; /* Elimina el margen superior e inferior para evitar duplicación */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none; /* Elimina el borde al hacer focus */
+}
+
+.login-container .form-group input[type="text"]:focus,
+.login-container .form-group input[type="password"]:focus {
+    border-color: var(--primary-color-custom); /* Cambia el color del borde al hacer focus */
+}
+
+.login-container .form-group label {
+    color: #49454567;
+    font-size: 15px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+.login-container .form-group input:focus~label,
+.login-container .form-group input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: var(--primary-color-custom);
+}
+
+.login-container button{
+    font-family: "Rubik", -apple-system, SF Pro Text, SF UI Text, system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(172,32,190,1) 100%, rgba(0,212,255,1) 100%);
+    border: none;
+    border-radius: 8px;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Cover-page */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main.index-main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita que la imagen de fondo se desborde */
+    display: flex; /* Utilizamos flexbox para centrar el contenido */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita que la imagen de fondo se desborde */
+    display: flex; /* Utilizamos flexbox para centrar el contenido */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/img/capsules.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
+    z-index: 1; /* Coloca el fondo oscuro por encima de la imagen de fondo */
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Coloca el contenido por encima del fondo oscuro */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white; /* Color del texto */
+}
+
+
+
+
